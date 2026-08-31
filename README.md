@@ -4,11 +4,11 @@
 
 This project implements a proof-of-concept PySpark data pipeline for processing wind turbine sensor data.
 
-The source data contains hourly measurements for 15 wind turbines across multiple CSV files. The pipeline ingests and cleans the source data, calculates daily power output statistics, identifies anomalous turbine readings, and stores the processed outputs for further analysis.
+The source data contains hourly measurements for 15 wind turbines across three CSV files. The pipeline ingests and cleans the source data, calculates daily power output statistics, identifies anomalous turbine readings, and stores the processed outputs for further analysis.
 
 ## Approach
 
-The pipeline follows the below process:
+The pipeline follows this process:
 
 `CSV -> PySpark ingestion -> cleaning -> daily summary -> anomaly detection -> Parquet -> DuckDB`
 
@@ -37,8 +37,7 @@ The pipeline follows the below process:
 Install the required dependencies:
 
 ```bash
-pip install -r requirements.txt
-pip install -e .
+pip install -e ".[test]"
 ```
 
 Run the pipeline:
